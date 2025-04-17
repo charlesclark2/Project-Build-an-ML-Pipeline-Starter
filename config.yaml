@@ -1,12 +1,19 @@
 main:
   components_repository: "https://github.com/udacity/Project-Build-an-ML-Pipeline-Starter.git#components"
+  model_repository: "https://github.com/charlesclark2/Project-Build-an-ML-Pipeline-Starter.git#src"
   # All the intermediate files will be copied to this directory at the end of the run.
   # Set this to null if you are running in prod
   project_name: nyc_airbnb
   experiment_name: development
-  steps: all
+  steps: 
+    - download
+    - basic_cleaning
 etl:
   sample: "sample1.csv"
+  sample_dataset: "nyc_airbnb/sample1.csv:latest"
+  cleaning_output_dataset: "cleaned_data.csv"
+  cleaning_output_type: "cleaned_data", 
+  cleaning_output_description: "Cleaned NYC Airbnb Data"
   min_price: 10  # dollars
   max_price: 350  # dollars
 data_check:
