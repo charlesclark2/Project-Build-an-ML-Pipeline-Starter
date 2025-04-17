@@ -29,6 +29,10 @@ modeling:
   trainval_artifact: "trainval_data.csv:latest"
   # output artifact for training
   training_output_artifact: "random_forest_export"
+  # production model artifact
+  prod_model_artifact: "random_forest_export:prod"
+  # test artifact
+  test_artifact: "test_data.csv:latest"
   # Fraction of data to use for test (the remaining will be used for train and validation)
   test_size: 0.2
   # Fraction of remaining data to use for validation
