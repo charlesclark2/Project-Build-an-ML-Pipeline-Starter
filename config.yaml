@@ -5,9 +5,7 @@ main:
   # Set this to null if you are running in prod
   project_name: nyc_airbnb
   experiment_name: development
-  steps: 
-    - download
-    - basic_cleaning
+  steps: all
 etl:
   sample: "sample1.csv"
   sample_dataset: "nyc_airbnb/sample1.csv:latest"
