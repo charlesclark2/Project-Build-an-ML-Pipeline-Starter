@@ -8,14 +8,20 @@ main:
   steps: all
 etl:
   sample: "sample1.csv"
-  sample_dataset: "nyc_airbnb/sample1.csv:latest"
-  cleaning_output_dataset: "cleaned_data.csv"
-  cleaning_output_type: "cleaned_data", 
+  sample_dataset: "nyc_airbnb/sample.csv:latest"
+  cleaning_output_dataset: "clean_sample.csv"
+  cleaning_output_type: "cleaned_data"
   cleaning_output_description: "Cleaned NYC Airbnb Data"
   min_price: 10  # dollars
   max_price: 350  # dollars
 data_check:
+  csv: "clean_sample.csv:latest", 
+  ref: "clean_sample.csv:reference",
   kl_threshold: 0.2
+  min_price: 10 # dollars
+  max_price: 350 # dollars
+  min_size: 15000
+  max_size: 1000000
 modeling:
   # Fraction of data to use for test (the remaining will be used for train and validation)
   test_size: 0.2
