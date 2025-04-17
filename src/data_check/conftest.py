@@ -83,7 +83,7 @@ def min_size(request):
 
 
 @pytest.fixture(scope='session')
-def maz_size(request):
+def max_size(request):
     max_size = request.config.option.max_size
 
     if max_size is None:
