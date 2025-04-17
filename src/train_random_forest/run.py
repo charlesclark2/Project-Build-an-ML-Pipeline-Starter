@@ -72,7 +72,7 @@ def go(args):
     # Then fit it to the X_train, y_train data
     logger.info("Fitting")
 
-    sk_pipe.fit(X_train, y_train)
+    sk_pipe.fit(X_train[processed_features], y_train)
 
     # Compute r2 and MAE
     logger.info("Scoring")
@@ -159,7 +159,7 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
     # 1 - A SimpleImputer(strategy="most_frequent") to impute missing values
     # 2 - A OneHotEncoder() step to encode the variable
     non_ordinal_categorical_preproc = make_pipeline(
-        # YOUR CODE HERE
+        SimpleImputer(strategy="most_frequent"), OneHotEncoder()
     )
     ######################################
 
@@ -222,7 +222,8 @@ def get_inference_pipeline(rf_config, max_tfidf_features):
 
     sk_pipe = Pipeline(
         steps =[
-        # YOUR CODE HERE
+            ("preprocessor", preprocessor),
+            ("classifier", random_forest)
         ]
     )
 
