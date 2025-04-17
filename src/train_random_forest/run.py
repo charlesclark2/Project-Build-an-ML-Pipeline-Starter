@@ -90,8 +90,10 @@ def go(args):
     if os.path.exists("random_forest_dir"):
         shutil.rmtree("random_forest_dir")
 
+    # Resolving object columns 
+
     # Save the sk_pipe pipeline as a mlflow.sklearn model in the directory "random_forest_dir"
-    signature = infer_signature(X_train[processed_features], y_train)
+    signature = infer_signature(X_val[processed_features], y_val)
 
     mlflow.sklearn.save_model(
         sk_pipe, 
