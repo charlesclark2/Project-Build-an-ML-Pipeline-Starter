@@ -8,6 +8,7 @@ In this project you will build such a pipeline.
 
 ## Table of contents
 
+- [Submission](#submission)
 - [Preliminary steps](#preliminary-steps)
   * [Fork the Starter Kit](#fork-the-starter-kit)
   * [Create environment](#create-environment)
@@ -15,6 +16,12 @@ In this project you will build such a pipeline.
   * [The configuration](#the-configuration)
   * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
   * [Pre-existing components](#pre-existing-components)
+
+## Submission
+
+**Github Link**: https://github.com/udacity/Project-Build-an-ML-Pipeline-Starter/tree/main/components
+
+**Weights and Biases Link**: https://wandb.ai/ctcb57-western-governors-university/nyc_airbnb?nw=nwuserctcb57 
 
 ## Preliminary steps
 
@@ -38,7 +45,7 @@ and click on `Fork` in the upper right corner. This will create a fork in your G
 repository that is under your control. Now clone the repository locally so you can start working on it:
 
 ```
-git clone https://github.com/[your github username]/Project-Build-an-ML-Pipeline-Starter.git
+git clone https://github.com/charlesclark2/Project-Build-an-ML-Pipeline-Starter.git
 ```
 
 and go into the repository:
